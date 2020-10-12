@@ -65,10 +65,10 @@ namespace ICUTools
 
             // 呼吸
             var spo2 = convert(textBox_spo2.Text.Trim(), "SPO2");
-            if (rr != null)
+            if (spo2 != null)
             {
                 CheckStringBuilder(stringBuilder);
-                stringBuilder.Append(string.Format("SPO2:{0}~{1}%", rr.Min(), rr.Max()));
+                stringBuilder.Append(string.Format("SPO2:{0}~{1}%", spo2.Min(), spo2.Max()));
             }
 
             // 血压
@@ -149,6 +149,11 @@ namespace ICUTools
             textBox_hr.Clear();
             textBox_bp.Clear();
             textBox_result.Clear();
+
+            numericUpDown1.Value = 0;
+            numericUpDown2.Value = 0;
+            numericUpDown3.Value = 0;
+            numericUpDown4.Value = 0;
         }
     }
 }
